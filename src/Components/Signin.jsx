@@ -21,7 +21,7 @@ const SignIn = () => {
             data.append("username",username)
             data.append("password",password)
 
-            const response = await axios.post("http://nyati.pythonanywhere.com/api/signin",data)
+            const response = await axios.post("https://nyati.pythonanywhere.com/api/signin",data)
 
             if(response.data.user){
                 localStorage.setItem("user",JSON.stringify(response.data.user))
