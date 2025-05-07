@@ -1,0 +1,538 @@
+
+
+/* /typew cursor */ */
+.blinking-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.btn.btn-primary{
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn.btn-primary {
+  background-color: #acd215;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(8, 70, 133, 0.4);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #0877a3;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.btn-primary:hover {
+ 
+  background-color: #1506e0;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  border: none;
+
+  animation: wiggle 0.2s ease-in-out infinite;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #0e648d;
+  transition: all 0.2s ease-in-out; 
+}
+
+.stunning-text-container {
+  font-family: 'Courier New', monospace; 
+  font-size: 60px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  animation: shineText 3s infinite linear; 
+}
+/* glow shimmer  */
+@keyframes shineText {
+  0% {
+    background-position: -100%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+/* Heartbeat animation  */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*  pulse effect */
+
+.form-control:focus {
+  border-color: #58a6ff;
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #0d6efd;
+  border: 2px solid #0d6efd;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn-submit:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.8), 0 0 30px rgba(13, 110, 253, 0.6);
+  transform: scale(1.05);
+  animation: glowing 1.5s infinite;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5), 0 0 10px rgba(13, 110, 253, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.7), 0 0 30px rgba(13, 110, 253, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5), 0 0 10px rgba(13, 110, 253, 0.4);
+  }
+}
+
+.btn-submit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: expand 2s infinite;
+}
+
+@keyframes expand {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  }
+/* SignIn Button */
+.btn-primary {
+  background-color: #0d6efd;
+  border: 2px solid #0d6efd;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.6);
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Hover Effect on Sign In  */
+.btn-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.8), 0 0 30px rgba(13, 110, 253, 0.6);
+  transform: scale(1.05);
+  animation: glowing 1.5s infinite;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5), 0 0 10px rgba(13, 110, 253, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.7), 0 0 30px rgba(13, 110, 253, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.5), 0 0 10px rgba(13, 110, 253, 0.4);
+  }
+}
+
+/* Expanding Circle */
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(186, 186, 25, 0.3);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: expand 2s infinite;
+}
+
+@keyframes expand {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+.blurred-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;  
+}
+
+.background-img {
+  color: #333;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  filter: blur(10px); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.stunning-text-container {
+  font-size: 80px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  z-index: 1;  
+  position: relative; 
+}
+
+.blinking-cursor {
+  animation: blink 0.75s infinite step-end;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;  
+  position: relative;}
+
+button:hover {
+  background-color: #333;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: linear-gradient(45deg, #b4b848, #bea91a, #69bc1d);
+  box-shadow: 0px 4px 20px rgba(12, 89, 152, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #0077ff; /* Blue border */
+  padding: 20px 0;
+  transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect on the navbar */
+.navbar:hover {
+  background: linear-gradient(45deg, #a90593, #c39d12, #444);
+  box-shadow: 0px 6px 25px rgba(6, 130, 144, 0.9);
+}
+
+/* Navbar container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #1e90ff; /* Bright Blue */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.4s ease, transform 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  color: #fff; /* White on hover */
+  transform: scale(1.1); /* Scale effect */
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-link {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e127cb;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #1e90ff; 
+  transform: translateY(-3px);
+}
+
+.navbar-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Icons container */
+.navbar-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Icon link styling */
+.navbar-icon {
+  color: white;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-icon:hover {
+  color: #1e90ff; /* Bright Blue */
+  transform: rotate(360deg);
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+/* Sign Up button */
+.navbar-signup {
+  background-color: #ff1ec7; /* Bright Blue */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0px 4px 15px rgba(15, 125, 135, 0.3);
+  transition: all 0.3s ease;
+}
+
+.navbar-signup:hover {
+  background-color: #d629bc; /* Darker Blue */
+  transform: scale(1.05);
+  color: #0f5570;
+  box-shadow: 0px 8px 20px rgba(7, 113, 188, 0.4);
+}
+
+.btn-blue {
+  background-color: #9b15aa;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  padding-left: 30px;
+  transition: 0.3s;
+}
+
+.btn-blue:hover {
+  background-color: #a315b6;
+}
+
+.btn-outline:hover {
+  background-color: #901597;
+  color: black;
+}
+
+
+
+.navbar-iconz{
+  margin: 30px;
+  font-weight: bolder;
+  background-color: #c40cb4;
+  color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
+  padding: 5px;
+}
+.navbar-iconz:hover{
+  background-color: red;
+  color: black;
+  border-radius: 6px;
+  transition: 0.3s;
+  padding: 5px;
+  font-weight: bolder;  
+}
+
+.navbar {
+  background-color: #cb30c0; /* or whatever bg you want */
+  padding: 12px 0;
+  box-shadow: 0 2px 10px rgba(0, 191, 255, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;     /* Limits the width of navbar */
+  margin: 0 auto;         /* Centers it horizontally */
+  padding: 0 20px;        /* Side spacing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-links,
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: #00bfff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-link:hover {
+  color: #00bfff;
+}
+
+.navbar-icon,
+.navbar-signup,
+.navbar-iconz {
+  color: #00bfff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-iconz:hover {
+  color: #080808;
+}
+
+.Home{
+  background-color: #000;
+  color: #3973c0;
+}
+.GetProducts{
+  background-color: #679299;
+}
+.SingleProduct{
+  background-color: #679299;
+}
+.PlaceOrder{
+  background-color: #679299;
+}
