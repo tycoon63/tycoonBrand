@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
 
 
 
@@ -35,19 +36,9 @@ const SingleProduct = () => {
     const img_url= "https://nyati.pythonanywhere.com/static/images/"
     return (
         <div className="SingleProduct">
+            <Navbar/>
             <div className="justify-content-center row mt-3">
-            <nav className="m-4">
-                <Link className="btn btn-dark mx-2" to="/">Home</Link>
-                <Link className="btn btn-dark mx-2" to="/addproduct">Add Product</Link>
-                <Link className="btn btn-dark mx-2" to="/signin">Sign In</Link>
-                <Link className="btn btn-dark mx-2" to="/signup">Sign Up</Link>
-                <Link className="btn btn-dark mx-2" to="/PlaceOrder">PlaceOrder</Link>
-                <Link className="btn btn-dark mx-2" to="/AboutUs">AboutUs</Link>
-
-
             
-
-                </nav>
                 <div className="col-md-3 card shadow">
                     <img src= {img_url+product.product_photo} alt="" />
                 </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./PlaceOrder.css";
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const PlaceOrder = () => {
   const [orderDetails, setOrderDetails] = useState({
@@ -24,27 +25,14 @@ const PlaceOrder = () => {
 
   <div className="row justify-content-center mt-4">
 
-  <nav className="m-4">
-            {/* <Link className="btn btn-dark mx-2" to="/">Home</Link> */}
-            <Link className="btn btn-dark mx-2" to="/addproduct">Add Product</Link>
-            <Link className="btn btn-dark mx-2" to="/signin">Sign In</Link>
-            <Link className="btn btn-dark mx-2" to="/signup">Sign Up</Link>
-            <Link className="btn btn-dark mx-2" to="/Chatbot">Chatbot</Link>
-            <Link className="btn btn-dark mx-2" to="/PlaceOrder">PlaceOrder</Link>
-            <Link className="btn btn-dark mx-2" to="/">Home</Link>
-            <Link className="btn btn-dark mx-2" to="/AboutUs">AboutUs</Link>
-
-
-
-            
-
-            </nav>
+  
   
   </div>
   return (
     
     
     <div className="place-order-container PlaceOrder">
+      <Navbar/>
       <div className="carousel-container">
         <div id="productCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">

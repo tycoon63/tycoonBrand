@@ -9,7 +9,10 @@ const Footer = () => {
             <p className="text-center colour-dark">Dont miss the new outfits </p>
             <div className="col-md-4">
               <h4 className="text-center text-dark">Location</h4>
-              <p className="text-dark">We are located at second floor westigate</p>
+              <p className="text-dark">We are located at :
+                <br /> WESTGATE MALL
+                <br /> SECOND FLOOR 
+                <br />SHOP NUMBER G32</p>
               <p className="text-dark">Address: 00100-45670</p>
               
             

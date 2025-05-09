@@ -5,7 +5,7 @@ const Product = () => {
   return (
     <div style={{ position: "relative", width: "100vw", height: "100vh" }}>
       <img
-        src="images/home cloth.webp"
+        src="images/home1.jpg"
         alt="Product"
         style={{
           width: "100%",

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Addproducts = () => {
     let [product_name, setProductName] = useState("")
@@ -50,21 +51,7 @@ const Addproducts = () => {
         
     return ( 
         <div className="row justify-content-center mt-4">
-            <nav className="m-4 Addproducts">
-                {/* <Link className="btn btn-dark mx-2" to="/">Home</Link> */}
-                <Link className="btn btn-dark mx-2" to="/Getproducts">Get products</Link>
-                <Link className="btn btn-dark mx-2" to="/signin">Sign In</Link>
-                <Link className="btn btn-dark mx-2" to="/signup">Sign Up</Link>
-                <Link className="btn btn-dark mx-2" to="/Chatbot">Chatbot</Link>
-                <Link className="btn btn-dark mx-2" to="/PlaceOrder">PlaceOrder</Link>
-                <Link className="btn btn-dark mx-2" to="/">Home</Link>
-                <Link className="btn btn-dark mx-2" to="/AboutUs">AboutUs</Link>
-
-
-
-                
-
-                </nav>
+            {<Navbar/>}
             <div className="col-md-6 card shadow p-4">
                 <h2>Add Product</h2>
                 <b className="text-success">{success}</b>

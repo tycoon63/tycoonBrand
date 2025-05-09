@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 const Test = () => {
 const [messages, setMessages] = useState([
 { sender: 'bot', text: "Hello I'm your chatbot. Type 'quit' to end the chat." }
@@ -13,20 +14,20 @@ const pairs = [
 "Hi, how can I help you today?",
 "Hello there, how can I assist you?"
 ]],
-[/(.*)(course|program|training|classes)(.*)/i, [
-"We offer great programs in Android Development, Full Stack Development, Data Science and many more. Would you like details on any of these?"
+[/(.*)(products|items|clothes)(.*)/i, [
+"You can view our products at the GetProducts "
 ]],
-[/(.*)android(.*)/i, [
-"We offer an Android course where you'll learn how to build mobile apps using Kotlin or Flutter. Interested?"
+[/(.*)about the brand (.*)/i, [
+"More information is detailed in our About us page"
 ]],
-[/(.*)(Duration|How long|Length|Weeks|Months)(.*)/i, [
-"Most of our courses run between 2 to 6 months. It can be longer if you go advanced."
+[/(.*)(how to contact)(.*)/i, [
+"The link of our site is found in evry internet site"
 ]],
-[/(.*)(apply|register|join)(.*)/i, [
-"You can join by registering online by visiting https://modcom.co.ke/register or visiting our office"
+[/(.*)(join)(.*)/i, [
+"You can join by registering online by visiting https://vercel.com/najibrashids-projects/tycoonbrand or visiting our office"
 ]],
 [/(.*)(location|located|address)(.*)/i, [
-"We are located at Haven Court, 2nd Floor, Westlands off Waiyaki Way"
+"We are located at Westagate"
 ]]
 ];
  
@@ -42,6 +43,7 @@ const fallbackResponses = [
 "Sorry I didn't get that",
 "Please clarify",
 "Pardon me?"
+
 ];
 return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
 };
@@ -72,7 +74,11 @@ endOfChatRef.current?.scrollIntoView({ behavior: 'smooth' });
  
 
 return (
+     <div>
+            {<Navbar/>}
 <div style={{ maxWidth: '500px', margin: '20px auto', fontFamily: 'Arial, sans-serif' }}>
+
+   
 <h2>ChatBot</h2>
 <div 
 
@@ -87,16 +93,6 @@ backgroundColor: '#f9f9f9'
 }}>
      <div className="row justify-content-center mt-4">
 
-<nav className="m-4">
-          {/* <Link className="btn btn-dark mx-2" to="/">Home</Link> */}
-          <Link className="btn btn-dark mx-2" to="/Getproducts">Getproducts</Link>
-
-
-
-
-          
-
-          </nav>
 
 </div>
 {messages.map((msg, index) => (
@@ -119,6 +115,7 @@ style={{ flex: 1, padding: '8px' }}
 />
 <button type="submit" style={{ padding: '8px 16px' }}>Send</button>
 </form>
+</div>
 </div>
 );
 };
